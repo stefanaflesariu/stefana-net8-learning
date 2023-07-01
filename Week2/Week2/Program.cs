@@ -7,6 +7,8 @@ Minimum number is 11
 Maximum number is 33
 
 */
+using System.Reflection.Metadata.Ecma335;
+
 int[] numbers = new int[3];
 //Se citesc numerele de la tastatura
 for (int i = 0; i <= 2; i++)
@@ -48,6 +50,5 @@ Maximum number is 99
 */
 for (int i = 0; i <= 2; i++)
 {
-    numbers[i] >= max ? numbers[i] = max : ;
-    numbers[i] < min ? numbers[i] = min : ;
+    int num=numbers[i] >= max ? numbers[i] = max :numbers[i] = min ;
 }
