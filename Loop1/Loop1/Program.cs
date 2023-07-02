@@ -8,7 +8,7 @@
 int suma = 0;
 for (int i = 0; i < 5; i++)
 {
-    
+
     if (arr[i]%2==0)
     {
         suma += arr[i];
@@ -68,7 +68,7 @@ for (int i = 0; i < array.Length; i++)
         if (array[i] == array[j])
         {
             count++;
-            
+
         }
     }
    Console.WriteLine(array[i]+" - "+count+"times"); 
@@ -133,7 +133,7 @@ if (a < b)
             Console.WriteLine("Output : "+newArray[i]);
         }
     }
-    
+
 }
 else
 {
@@ -168,7 +168,7 @@ foreach (int j in lista)
     else if(lista[j] % 3 == 0)
     {
        Console.WriteLine(lista[j] + " Fizz");
-        
+
     }else if(lista[j] % 5 == 0)
     {
          Console.WriteLine(lista[j] + " Buzz");
@@ -182,4 +182,84 @@ foreach (int j in lista)
 //Using while print the first 6 names of the list.
 //{a, b, c, d, e, f, g, h, i, j} -> { a, b, c, d, e, f}
 
+using Microsoft.VisualBasic;
+using System.Collections;
+using System.Collections.Generic;
+using System.Numerics;
 
+/*List<string> ItemList = new List<string>();
+for (int i = 0; i < 10; i++) 
+{
+    Console.WriteLine("Elementul "+ i +" este egal cu:"); 
+    var ListInput = Console.ReadLine();
+    ItemList.Add(ListInput);
+}
+
+Console.Write("Primele 6 elemente sunt: ");
+int count = 0;
+int j=0;
+while (count<6)
+{   
+    
+    Console.Write(ItemList[j]+ ", ");
+    j++;
+    count++;
+}
+*/
+
+//[Exercise 9]
+//Read numbers from the user until the input is 0. Use a do while loop.
+
+/*List<int> ItemList = new List<int>();
+int i = 0;
+do
+{
+     Console.WriteLine("Elementul "+i+" este: ");
+     var ListInput = int.Parse(Console.ReadLine());// citeste input
+     ItemList.Add(ListInput);//adauga element in lista
+     i++;
+}
+while (ItemList[i-1] != 0);*/
+
+//[Exercise 10]
+//Iterate from -1 to -123 and print all the numbers.
+//Break the iteration when you find the first number that divides to 21.
+//Use do while and break.
+
+/*int i = -1;
+do
+{
+    if(i % 21 == 0)
+    {
+        Console.WriteLine("Numarul " + i + " este primul care se divide la 21 ");
+        break;
+    }
+    i++;
+}while (i > -123);
+*/
+
+//[Exercise 11]
+//Read 10 names from the user (use a while loop) and store them in a list.
+//Display all the names from the list except for the ones that start with
+//"a", "A", "b" or "B". Use continue.
+
+List<string> input = new List<string>();
+List<string> list = new List<string>();
+int i = 0;
+while (i<3)
+{
+    Console.WriteLine("Numele "+i+" este: ");
+    input = Console.ReadLine().Split(new char[] { ',' }).ToList();;
+
+    /* if (input[i] == "a" || input[i] == "A" || input[i] == "b" || input[i] == "B")
+     {
+
+         continue;
+     }*/
+   //list.Add(input.ToString());
+     i++;
+}
+for(int j = 0; i < input.Count; i++)
+{
+    Console.WriteLine(input[j]);
+}
