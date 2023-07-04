@@ -1,0 +1,15 @@
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Loops\Loops\bin\Debug\net7.0\Loops.exe
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Loops\Loops\bin\Debug\net7.0\Loops.deps.json
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Loops\Loops\bin\Debug\net7.0\Loops.runtimeconfig.json
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Loops\Loops\bin\Debug\net7.0\Loops.dll
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Loops\Loops\bin\Debug\net7.0\Loops.pdb
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Loops\Loops\obj\Debug\net7.0\Loops.csproj.AssemblyReference.cache
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Loops\Loops\obj\Debug\net7.0\Loops.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Loops\Loops\obj\Debug\net7.0\Loops.AssemblyInfoInputs.cache
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Loops\Loops\obj\Debug\net7.0\Loops.AssemblyInfo.cs
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Loops\Loops\obj\Debug\net7.0\Loops.csproj.CoreCompileInputs.cache
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Loops\Loops\obj\Debug\net7.0\Loops.dll
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Loops\Loops\obj\Debug\net7.0\refint\Loops.dll
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Loops\Loops\obj\Debug\net7.0\Loops.pdb
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Loops\Loops\obj\Debug\net7.0\Loops.genruntimeconfig.cache
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Loops\Loops\obj\Debug\net7.0\ref\Loops.dll

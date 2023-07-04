@@ -1,0 +1,15 @@
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Algorithms\Algorithms\bin\Debug\net7.0\Algorithms.exe
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Algorithms\Algorithms\bin\Debug\net7.0\Algorithms.deps.json
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Algorithms\Algorithms\bin\Debug\net7.0\Algorithms.runtimeconfig.json
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Algorithms\Algorithms\bin\Debug\net7.0\Algorithms.dll
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Algorithms\Algorithms\bin\Debug\net7.0\Algorithms.pdb
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Algorithms\Algorithms\obj\Debug\net7.0\Algorithms.csproj.AssemblyReference.cache
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Algorithms\Algorithms\obj\Debug\net7.0\Algorithms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Algorithms\Algorithms\obj\Debug\net7.0\Algorithms.AssemblyInfoInputs.cache
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Algorithms\Algorithms\obj\Debug\net7.0\Algorithms.AssemblyInfo.cs
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Algorithms\Algorithms\obj\Debug\net7.0\Algorithms.csproj.CoreCompileInputs.cache
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Algorithms\Algorithms\obj\Debug\net7.0\Algorithms.dll
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Algorithms\Algorithms\obj\Debug\net7.0\refint\Algorithms.dll
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Algorithms\Algorithms\obj\Debug\net7.0\Algorithms.pdb
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Algorithms\Algorithms\obj\Debug\net7.0\Algorithms.genruntimeconfig.cache
+C:\Users\denni\Documents\GitHub\stefana-net8-learning\Algorithms\Algorithms\obj\Debug\net7.0\ref\Algorithms.dll
