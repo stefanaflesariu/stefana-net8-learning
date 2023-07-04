@@ -182,4 +182,79 @@ foreach (int j in lista)
 //Using while print the first 6 names of the list.
 //{a, b, c, d, e, f, g, h, i, j} -> { a, b, c, d, e, f}
 
+using System.Collections;
+using System.Collections.Generic;
 
+/*List<string> lista = new List<string>();
+int[] array = new int[] { };
+int i=0;
+
+    for (int j = 0; j <= 10; j++)
+    {
+        Console.WriteLine("Elementul " + j + " este: ");
+        String input = Console.ReadLine();
+        lista.Add(input);
+
+    }
+    Console.Write("Primele 6 numere sunt: ");
+    while (i < 6)
+    {
+    Console.Write(lista[i]+ " ");
+    i++;
+    }*/
+
+//[Exercise 9]
+//Read numbers from the user until the input is 0. Use a do while loop.
+
+/*
+int[] array = new int[] { };
+int j = 0;
+do {
+    Console.WriteLine("Elementul "+ j +" este: ");
+    array[j] =Convert.ToInt32(Console.ReadLine());
+    j++;
+} while (array[j-1]!=0);
+*/
+//[Exercise 10]
+//Iterate from -1 to -123 and print all the numbers.
+//Break the iteration when you find the first number that divides to 21.
+//Use do while and break.
+
+/*int i = -1;
+    do
+    {
+        if (i % 21 == 0)
+        {
+            break;
+        }
+        else
+        {
+        Console.WriteLine(i);
+        }
+        i++;
+        
+    } while (i<123);*/
+
+//[Exercise 11]
+//Read 10 names from the user (use a while loop) and store them in a list.
+//Display all the names from the list except for the ones that start with "a", "A", "b" or "B".
+//Use continue.
+
+List<string> lista = new List<string>();
+int j = 0;
+while (j<10)
+{
+    Console.WriteLine("Elementul " + j + " este: ");
+    String input = Console.ReadLine();
+    lista.Add(input);
+    
+    if (lista[j]=="a"|| lista[j] == "A" ||lista[j] == "b"||lista[j] == "B"){
+        
+        continue;
+    }
+    else
+    {
+        Console.WriteLine(lista[j]);
+    }
+    j++;
+}
