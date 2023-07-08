@@ -8,16 +8,38 @@ namespace OOP_Intro
 {
     public class Book
     {
-        public string name;
-        public string author;
         public string title;
-        public string description;
+        public string author;
+        public int year;
 
-        public Book(string name, string author, string title, string description) {
-            this.name = name;
-            this.author = author;
+        public Book(string title, string author,  int year) {
             this.title = title;
-            this.description = description;
+            this.author = author;
+            this.year = year;
+        }
+        public string GetTitle()
+        {
+            return title;
+        }
+        public string GetAuthor()
+        {
+            return author;
+        }
+        public int  GetYear()
+        {
+            return year;
+        }
+        public void SetTitle(string title)
+        {
+            this.title = title;
+        }
+        public void SetAuthor(string author)
+        {
+            this.author = author;
+        }
+        public void SetYear(int year)
+        {
+            this.year = year;
         }
     }
 }

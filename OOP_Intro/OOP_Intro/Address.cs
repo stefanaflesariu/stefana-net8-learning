@@ -23,7 +23,7 @@ namespace OOP_Intro
         }
         public void getStreet() {
 
-            Console.WriteLine($"Strada {this.street}");
+            Console.WriteLine($"Strada: {this.street}");
         }
     }
 }
