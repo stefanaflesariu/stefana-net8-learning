@@ -301,7 +301,8 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 using OOP_Intro.Ex8;
 
-Student student = new Student("Mihai", new DateTime(2018,12,12), new DateTime(2020, 12, 12), "College1", new DateTime(1999,12,20));
-student.IsStillStudent();
+Student student = new Student("Mihai", new DateTime(2018,12,12), "College1", new DateTime(1999,12,20));
+student.IsStillStudent(new DateTime(2020, 12, 12));
 Console.WriteLine(student.GetAge()); 
 student.Print();
+

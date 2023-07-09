@@ -15,17 +15,16 @@ namespace OOP_Intro.Ex8
         public DateTime birthDate;
         public bool isStillStudent;
         public DateTime dateTimeToday = DateTime.UtcNow;
-        public Student(string name, DateTime startDate, DateTime endDate, string college, DateTime birthDate)
+        public Student(string name, DateTime startDate, string college, DateTime birthDate)
         { 
             this.name = name;
             this.startDate = startDate;
-            this.endDate = endDate;
             this.college = college;
             this.birthDate = birthDate;
         }
-        public void IsStillStudent() { 
+        public void IsStillStudent( DateTime endDate) { 
 
-            if (endDate.Year == dateTimeToday.Year) {
+            if (endDate == null) {
 
                 Console.WriteLine("Is still student");
             }
