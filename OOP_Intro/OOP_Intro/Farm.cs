@@ -19,7 +19,7 @@ namespace OOP_Intro
         public void AddAnimals(int count)
         {
             animalCount = count;
-            Console.WriteLine($"Ferma are {animalCount} animale");
+            Console.WriteLine($"The farm has {animalCount} animals");
         }
         public double CalculateDensity()
         {

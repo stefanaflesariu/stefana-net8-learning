@@ -27,17 +27,17 @@ namespace OOP_Intro
         //Afiseaza datele filmului
         public void ShowMovieDetails()
         {
-            Console.WriteLine($"Numele filmului: {this.name}, Anul aparitiei: {this.year}, Genul filmului: {this.genre}, Durata filmului: {this.duration}");
+            Console.WriteLine($"Name: {this.name}, Year of appearance: {this.year}, Genre: {this.genre}, Duration: {this.duration}");
         }
 
         //Verifica din ce secol face parte filmul
         public void CheckCenturyMovie()
         {
             if ( year == 0 ) {
-                throw new Exception("Anul filmului nu este specificat");
+                throw new Exception("The year of the film is not specified");
             }else if( this.year < 2000)
             {
-                Console.WriteLine("Filmul apartine secolului XX");
+                Console.WriteLine("The film is from the 20th century");
             }
             else
             {
@@ -52,11 +52,11 @@ namespace OOP_Intro
 
             if( this.year ==1 ) 
             {
-                Console.WriteLine($"Filmul are o vechime de: " + this.year + " an");
+                Console.WriteLine($"The film has an age of: " + this.year + " year");
             }
             else
             {
-                Console.WriteLine("Filmul are o vechime de: " + this.year + " ani");
+                Console.WriteLine("The film has an age of: " + this.year + " years");
             }
         }
 

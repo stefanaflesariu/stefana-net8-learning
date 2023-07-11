@@ -13,7 +13,6 @@ namespace OOP_Intro.Ex8
         public DateTime endDate;
         public string college;
         public DateTime birthDate;
-        public bool isStillStudent;
         public DateTime dateTimeToday = DateTime.UtcNow;
         public Student(string name, DateTime startDate, string college, DateTime birthDate)
         { 
@@ -24,7 +23,7 @@ namespace OOP_Intro.Ex8
         }
         public void IsStillStudent( DateTime endDate) { 
 
-            if (endDate == null) {
+            if (endDate.Year >= dateTimeToday.Year) {
 
                 Console.WriteLine("Is still student");
             }

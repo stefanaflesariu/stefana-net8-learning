@@ -26,12 +26,12 @@ namespace OOP_Intro
         //METODE
         public void showContactDetails()
         {
-            Console.WriteLine($"Detali de contact:  {this.name}, {this.phoneNumber}" );
+            Console.WriteLine($"Contact details:  {this.name}, {this.phoneNumber}" );
         }
         public int showYearOfBirth()
         {
             int yearOfBirth = 2023-this.age;
-            Console.Write($"Anul nasterii lui {this.name} este: ");
+            Console.Write($"{this.name}'s year of birth is: ");
             return yearOfBirth;
         }
      }

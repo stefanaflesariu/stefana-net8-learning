@@ -3,7 +3,8 @@
 //For example, if you watch movies, try to create a class Movie with necessary fields and methods. 
 //!!! Create at least 5 classes and use them to create objects
 
-//using OOP_Intro;
+using OOP_Intro;
+
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
@@ -15,13 +16,20 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 //movie1.CheckCenturyMovie();
 //movie1.CheckOldMovie();
 
-//De ce afiseaza numarul de telefon fara 0 ?
+//does not display the first 0
 //Person person1 = new Person("Andrei", 0755145698, 28);
 //person1.showContactDetails();
 //Console.WriteLine(person1.showYearOfBirth());
 
 //Address address1 = new Address("Teilor","Sibiu","Romania", 500035);
 //address1.getStreet();
+
+//House house1 = new House(357,"Principala","white");
+//house1.Print();
+
+Fruit fruit1 = new Fruit("Mar","rosu",3.50,4);
+fruit1.Print();
+Console.WriteLine(fruit1.TotalPrice());
 
 
 
@@ -299,10 +307,10 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 //-name, faculity, specialization
 //-name, faculity, specialization, studentsWhoGiveTheirDegree
 
-using OOP_Intro.Ex8;
+//using OOP_Intro.Ex8;
 
-Student student = new Student("Mihai", new DateTime(2018,12,12), "College1", new DateTime(1999,12,20));
-student.IsStillStudent(new DateTime(2020, 12, 12));
-Console.WriteLine(student.GetAge()); 
-student.Print();
+//Student student = new Student("Mihai", new DateTime(2018,12,12), "College1", new DateTime(1999,12,20));
+//student.IsStillStudent(new DateTime(2020, 12, 12));
+//Console.WriteLine(student.GetAge()); 
+//student.Print();
 
