@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOP_Advanced_Homework.Exercise_6
+namespace OOP_Advanced_Homework.Exercise_7
 {
     public static  class Payment
     {
