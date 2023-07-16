@@ -14,6 +14,9 @@ int secondNumber = int.Parse(Console.ReadLine());
 
 Console.WriteLine((firstNumber < 100 && secondNumber > 100));
 
+if (firstNumber == secondNumber)
+{
 
-
+    Console.WriteLine();
+}
 
