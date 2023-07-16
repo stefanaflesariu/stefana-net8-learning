@@ -1,12 +1,33 @@
-﻿using OOP_Advanced_Homework.Exercise_1;
+﻿using OOP_Advanced_Homework.Classwork_Exercise_5;
+using OOP_Advanced_Homework.Exercise_1;
 using OOP_Advanced_Homework.Exercise_2;
 //using OOP_Advanced_Homework.Exercise_3;
-using OOP_Advanced_Homework.Exercise_4;
+//using OOP_Advanced_Homework.Exercise_4;
 using OOP_Advanced_Homework.Exercise_5;
 using OOP_Advanced_Homework.Exercise_6;
 using System;
 using static OOP_Advanced_Homework.Exercise_4.Employee;
 using BankAccount = OOP_Advanced_Homework.Exercise_5.BankAccount;
+
+
+
+//Classwork Exercise 5
+Manager john = new Manager("John", "Doe", 50000);
+RegularEmployee jane = new RegularEmployee("Jane", "Smith", 30000);
+
+john.AddEmployee(jane);
+
+Console.WriteLine(john.GetFullName()); // Outputs "John Doe"
+Console.WriteLine(jane.GetFullName()); // Outputs "Jane Smith"
+
+Console.WriteLine(john.GetMonthlySalary()); // Outputs 4166.66666666667
+Console.WriteLine(jane.GetMonthlySalary()); // Outputs 2500
+
+Console.WriteLine(john.GetTotalMonthlySalary()); // Outputs 6666.66666666667
+
+
+
+
 
 
 //Exercise 1
@@ -136,7 +157,7 @@ Console.WriteLine(Bank.NumAccounts); // Outputs 2
 
 //Exercise 6
 //Interfaces can be used to create objects ??
-IShape circle = new Circle(5);
+/*IShape circle = new Circle(5);
 IShape rectangle = new Rectangle(10, 5);
 
 Console.WriteLine(circle.CalculateArea()); // Outputs 78.5398163397448
@@ -153,6 +174,6 @@ rectangleColor.Color = "Blue";
 
 Console.WriteLine(circleColor.Color); // Outputs "Red"
 Console.WriteLine(rectangleColor.Color); // Outputs "Blue"
-
+*/
 
 //Exercise 7

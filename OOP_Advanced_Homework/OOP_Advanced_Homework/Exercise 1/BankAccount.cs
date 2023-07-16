@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP_Advanced_Homework.Exercise_1
 {
-    public class BankAccount 
+    public class BankAccount
     {
         public int AccountNumber { get; set; }
         public string AccountHolder { get; set; }
@@ -35,18 +35,19 @@ namespace OOP_Advanced_Homework.Exercise_1
             Balance -= amount;
             Transactions.Add(
 
-                new Transaction() {
+                new Transaction()
+                {
                     Type = "Withdrew",
                     Amount = amount
                 }
-             );  
+             );
         }
         public decimal GetBalance()
         {
             return Balance;
         }
-        public List <Transaction> GetTransactionHistory() {
-        
+        public List<Transaction> GetTransactionHistory()
+        {
             return Transactions;
         }
     }
