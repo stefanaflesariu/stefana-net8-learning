@@ -242,24 +242,46 @@ do
 //Read 10 names from the user (use a while loop) and store them in a list.
 //Display all the names from the list except for the ones that start with
 //"a", "A", "b" or "B". Use continue.
+/*Console.WriteLine();
+Console.WriteLine("--- Ex 11 ---");
 
-List<string> input = new List<string>();
-List<string> list = new List<string>();
-int i = 0;
-while (i<3)
+List<string> names = new List<string>();
+
+int index = 0;
+while (index < 10)
 {
-    Console.WriteLine("Numele "+i+" este: ");
-    input = Console.ReadLine().Split(new char[] { ',' }).ToList();;
-
-    /* if (input[i] == "a" || input[i] == "A" || input[i] == "b" || input[i] == "B")
-     {
-
-         continue;
-     }*/
-   //list.Add(input.ToString());
-     i++;
+    Console.WriteLine("Provide the name on position " + index);
+    names.Add(Console.ReadLine());
+    index++;
 }
-for(int j = 0; i < input.Count; i++)
+
+Console.WriteLine("The names that don't start with a, A, b or B:");
+foreach (string name in names)
 {
-    Console.WriteLine(input[j]);
+    if (name.StartsWith("a") || name.StartsWith("A") || name.StartsWith("b") || name.StartsWith("B"))
+    {
+        continue;
+    }
+    Console.WriteLine(name);
+}*/
+List<string> lista = new List<string>();
+int j = 0;
+while (j < 10)
+{
+    Console.WriteLine("The Element " + j + " is: ");
+    lista.Add(Console.ReadLine());
+    j++;
+}
+foreach (string str in lista)
+{
+    if (str.StartsWith("a") || str.StartsWith("A") || str.StartsWith("b") || str.StartsWith("B"))
+    {
+
+        continue;
+    }
+    else
+    {
+        Console.WriteLine(str);
+    }
+    
 }
