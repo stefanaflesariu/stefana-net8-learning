@@ -6,17 +6,22 @@ using System.Threading.Tasks;
 
 namespace OOP_Advanced_Homework.Exercise_7
 {
-    public class Customer : IContact, IHotel
+    public class Customer : IContact
     {
-        public string HotelName  // implements the HotelName property on the IHotel interface.
+        public string Name
         {
-            get => HotelName;
-            set => HotelName = value;
+            get { return Name; }
+            set { Name = value; }
         }
-        public string HotelAddress  // implements the HotelAddress property on the IHotel interface.
+        public string Address
         {
-            get => HotelAddress;
-            set => HotelAddress = value;
+            get { return Address; }
+            set { Address = value; }
+        }
+        public int PhoneNumber
+        {
+            get { return PhoneNumber; }
+            set { PhoneNumber = value; }
         }
     }
 }

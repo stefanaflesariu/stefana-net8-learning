@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP_Advanced_Homework.Exercise_7
 {
-    public interface IHotel
+    internal class Hotel
     {
-        //Auto-Implemented properties
-        public string HotelName { get; set; }
-        public string HotelAddress { get; set; }
     }
 }

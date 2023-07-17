@@ -7,17 +7,40 @@ using System.Threading.Tasks;
 
 namespace OOP_Advanced_Homework.Exercise_7
 {
-    public class Employee :IHotel,IContact
+    public class Employee : Payment,IContact
     {
-        public string HotelName  // implements the HotelName property on the IHotel interface.
+        public string Name
         {
-            get => HotelName;
-            set => HotelName = value;
+            get { return Name; }
+            set { Name = value; }
         }
-        public string HotelAddress  // implements the HotelAddress property on the IHotel interface.
+        public string Address
         {
-            get => HotelAddress;
-            set => HotelAddress = value;
+            get { return Address; }
+            set { Address = value; }
         }
+        public int PhoneNumber
+        {
+            get { return PhoneNumber; }
+            set { PhoneNumber = value; }
+        }
+        public List<Reservation> Reservations { get; set; } = new List<Reservation>();
+        private double Salary { get; set; }
+        public Employee(string name, string address, int phoneNumber)
+        {
+
+            Name = name;
+            Address = address;
+            PhoneNumber = phoneNumber;
+        }
+        public void AddNewReservation(Reservation reservation)
+        {
+            if (IsPaid == true)
+            {
+                Reservations.Add(reservation);
+            }
+        }
+
+
     }
 }

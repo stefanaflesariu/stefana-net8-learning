@@ -6,9 +6,22 @@ using System.Threading.Tasks;
 
 namespace OOP_Advanced_Homework.Exercise_7
 {
-    public static  class Payment
+    public  class Payment : Reservation 
     {
-        public static string Type { get;set; }
-        public static bool IsPaid;
+        public string PaymentType { get;set; }
+        public bool IsPaid;
+        public double Amount { get; set; }
+        public void Pay(string PaymentType,double Amount) {
+            
+            if(Amount == stayPrice)
+            {
+                IsPaid = true;
+            }
+            else
+            {
+                throw new Exception("Payment not accepted");
+                IsPaid=false;
+            }
+        }
     }
 }
