@@ -11,7 +11,6 @@ namespace OOP_Advanced_Homework.Exercise_7
         public string RoomNumber { get; set; }
         public string RoomType { get; set; }
         public double PricePerNight { get; set; }
-
-        
+        public abstract double StayPrice();
     }
 }

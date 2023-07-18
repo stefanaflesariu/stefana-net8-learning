@@ -1,10 +1,12 @@
-﻿using OOP_Advanced_Homework.Classwork_Exercise_5;
+﻿//using OOP_Advanced_Homework.Classwork_Exercise_5;
 using OOP_Advanced_Homework.Exercise_1;
 using OOP_Advanced_Homework.Exercise_2;
+using OOP_Advanced_Homework.Exercise_3;
 //using OOP_Advanced_Homework.Exercise_3;
 //using OOP_Advanced_Homework.Exercise_4;
-using OOP_Advanced_Homework.Exercise_5;
+//using OOP_Advanced_Homework.Exercise_5;
 using OOP_Advanced_Homework.Exercise_6;
+using OOP_Advanced_Homework.Exercise_7;
 using System;
 using static OOP_Advanced_Homework.Exercise_4.Employee;
 using BankAccount = OOP_Advanced_Homework.Exercise_5.BankAccount;
@@ -12,7 +14,7 @@ using BankAccount = OOP_Advanced_Homework.Exercise_5.BankAccount;
 
 
 //Classwork Exercise 5
-Manager john = new Manager("John", "Doe", 50000);
+/*Manager john = new Manager("John", "Doe", 50000);
 RegularEmployee jane = new RegularEmployee("Jane", "Smith", 30000);
 
 john.AddEmployee(jane);
@@ -24,9 +26,7 @@ Console.WriteLine(john.GetMonthlySalary()); // Outputs 4166.66666666667
 Console.WriteLine(jane.GetMonthlySalary()); // Outputs 2500
 
 Console.WriteLine(john.GetTotalMonthlySalary()); // Outputs 6666.66666666667
-
-
-
+*/
 
 
 
@@ -177,3 +177,18 @@ Console.WriteLine(rectangleColor.Color); // Outputs "Blue"
 */
 
 //Exercise 7
+
+Employee employee = new Employee("Iulia P.","Strada Principala 345",0755184582,2500);
+Customer customer = new Customer("Adrian M." ,"Strada Mori, 45", 0734429476);
+Reservation myReservation = new Reservation()
+{
+    ArriveDate = new DateTime(2023, 10, 18),
+    DepartureDate = new DateTime(2023, 10, 25),
+    RoomNumber = "3A",
+    RoomType = "double room",
+    PricePerNight = 215
+};
+
+Console.WriteLine($"Payment price: { myReservation.StayPrice()} ");
+//customer.Pay("Card", 1505);
+//employee.AddNewReservation(myReservation);
