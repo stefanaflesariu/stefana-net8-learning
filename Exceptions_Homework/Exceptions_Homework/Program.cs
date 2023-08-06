@@ -6,6 +6,5 @@ using System.Numerics;
 using Exceptions_Homework;
 using static Exceptions_Homework.ExceptionRunner;
 
-//Exercise 1
 
 Run();
