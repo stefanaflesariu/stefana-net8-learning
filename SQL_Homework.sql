@@ -93,6 +93,8 @@ INSERT INTO Books_Libraries
 VALUES  (2,1)
 INSERT INTO Books_Libraries
 VALUES  (3,3)
+INSERT INTO Books_Libraries
+VALUES  (1,3)
 
 SELECT *
 FROM Books_Libraries;
@@ -195,16 +197,62 @@ SELECT * FROM Libraries;
 SELECT * FROM Author
 SELECT * FROM Books;
 
-SELECT Author.EmailAddress, COUNT(Books.AuthorId) 
-FROM (Author
-INNER JOIN Books ON Author.Id = AuthorId)
-GROUP BY EmailAddress
-HAVING COUNT(Books.AuthorId) > 3;
+SELECT Author.EmailAddress, COUNT(Books.AuthorId) AS 'Books published'
+FROM Author
+INNER JOIN Books ON Author.Id = AuthorId
+GROUP BY EmailAddress 
+HAVING COUNT(Books.AuthorId) >= 3;
 
 -- Ex 5
 SELECT * FROM Sales
+SELECT * FROM Books_Libraries
+SELECT * FROM Books
 
-SELECT NumberOfCopies, Libraries.Name 
+SELECT Libraries.Name , Books.Title
+FROM Books_Libraries
+INNER JOIN Libraries ON LibraryId=Libraries.Id
+INNER JOIN Books ON BookId=Books.Id
+
+SELECT MAX(Sales.NumberOfCopies)
 FROM Sales
-JOIN Libraries ON LibraryId= Libraries.Id
-GROUP BY  Libraries.Name
+JOIN Libraries ON LibraryId=Libraries.Id
+
+--EX 6
+SELeCT * FRoM Librarians
+
+SELECT Librarians.Name
+FROM Librarians
+WHERE IsOnHoliday = 'no' AND DATEDIFF(YEAR,HireDate, GETDATE()) > 5  
+
+--Ex 7
+SELECT * FROM Books_Libraries
+GO
+CREATE PROCEDURE ShowLibraries(@title VARCHAR)
+AS
+BEGIN
+    SELECT Books.Title As 'Title of Book' ,COUNT(Libraries.Id) AS 'Number of Libraries'
+    FROM Books
+    JOIN  Books_Libraries ON BookId=Books.Id
+    JOIN Libraries ON LibraryId = Libraries.Id
+    GROUP BY Books.Title 
+    HAVING Title = @title
+END
+DROP procedure ShowLibraries
+-- call the procedure
+GO
+exec ShowLibraries @title='Strainul';
+--Ex 8
+
+GO
+CREATE FUNCTION dbo.HelloWorldFunction(
+@email VARCHAR
+)
+RETURNS varchar(20)
+AS
+BEGIN
+RETURN 'Hello world'
+END;
+-- call the function
+
+GO
+select dbo.HelloWorldFunction();
