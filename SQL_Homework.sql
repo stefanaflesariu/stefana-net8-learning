@@ -194,53 +194,60 @@ SELECT * FROM Libraries;
 
 
 --Ex 4
-SELECT * FROM Author
+SELECT * FROM Author;
 SELECT * FROM Books;
 
-SELECT Author.EmailAddress, COUNT(Books.AuthorId) AS 'Books published'
+SELECT Author.EmailAddress
 FROM Author
 INNER JOIN Books ON Author.Id = AuthorId
 GROUP BY EmailAddress 
 HAVING COUNT(Books.AuthorId) >= 3;
 
 -- Ex 5
+
 SELECT * FROM Sales
-SELECT * FROM Books_Libraries
-SELECT * FROM Books
+SELECT * FROM Libraries
+SELECT * FROM Books_Sales
+SELECT * FROM  Books_Libraries
 
-SELECT Libraries.Name , Books.Title
-FROM Books_Libraries
-INNER JOIN Libraries ON LibraryId=Libraries.Id
-INNER JOIN Books ON BookId=Books.Id
+SELECT TOP 1 Libraries.Name, Books.Title FROM Libraries 
+JOIN Books_Libraries ON LibraryId =Libraries.Id
+JOIN  Books ON Libraries.Id=Books.Id
+JOIN Books_Sales ON Books.Id=Books_Sales.BookId
+JOIN Sales ON SalesId=Sales.Id
+ORDER BY Sales.NumberOfCopies ASC
 
-SELECT MAX(Sales.NumberOfCopies)
-FROM Sales
-JOIN Libraries ON LibraryId=Libraries.Id
 
 --EX 6
-SELeCT * FRoM Librarians
+SELECT * FROM Librarians
 
 SELECT Librarians.Name
 FROM Librarians
 WHERE IsOnHoliday = 'no' AND DATEDIFF(YEAR,HireDate, GETDATE()) > 5  
 
 --Ex 7
+SELECT * FROM Books
+SELECT * FROM Libraries
 SELECT * FROM Books_Libraries
+
 GO
-CREATE PROCEDURE ShowLibraries(@title VARCHAR)
+CREATE PROCEDURE ShowLibraries(@title VARCHAR(23))
 AS
 BEGIN
-    SELECT Books.Title As 'Title of Book' ,COUNT(Libraries.Id) AS 'Number of Libraries'
-    FROM Books
-    JOIN  Books_Libraries ON BookId=Books.Id
-    JOIN Libraries ON LibraryId = Libraries.Id
-    GROUP BY Books.Title 
-    HAVING Title = @title
+    SELECT Books.Title, COUNT(LibraryId) FROM Books_Libraries
+    JOIN Libraries ON Libraries.Id = Libraries.Id
+    JOIN Books ON BookId= Books.Id
+    WHERE Books.Title=@title
+    GROUP BY Books.Title
+    ORDER BY COUNT(LibraryId) DESC;
 END
 DROP procedure ShowLibraries
 -- call the procedure
 GO
 exec ShowLibraries @title='Strainul';
+exec ShowLibraries @title='Razboi si pace';
+exec ShowLibraries @title='Vina';
+
 --Ex 8
 
 GO
@@ -255,4 +262,41 @@ END;
 -- call the function
 
 GO
-select dbo.HelloWorldFunction();
+select dbo.HelloWorldFunction('lev@yahoo.com');
+
+--Ex 9
+GO
+CREATE TRIGGER AssignedLibraryWhenNewLibrarianIsAdded
+ON Librarians
+INSTEAD OF INSERT
+AS
+BEGIN
+    DECLARE @name CHAR(128);
+    DECLARE @HireDate Date;
+    DECLARE @IsOnHoliday  CHAR(3);
+    DECLARE @LibraryId INT;
+    SELECT @name = Name, @HireDate = HireDate, @IsOnHoliday = IsOnHoliday, @LibraryId = LibraryId FROM INSERTED;
+    IF  @LibraryId IS NULL SET @LibraryId = 2;
+    INSERT INTO Librarians
+    VALUES(@name , @HireDate, @IsOnHoliday, @LibraryId)
+END
+GO
+DROP TRIGGER AssignedLibraryWhenNewLibrarianIsAdded
+
+INSERT INTO Librarians(Name,HireDate,IsOnHoliday)
+VALUES('Iulian','2023-05-15','no');
+
+SELECT * FROM Librarians
+
+
+--Ex 10
+BEGIN TRANSACTION 
+INSERT INTO Librarians 
+VALUES('Corina','2023-05-15' ,'yes',1)
+SAVE TRANSACTION InsertStatement
+DELETE Librarians WHERE Id=1004
+SELECT * FROM Librarians 
+ROLLBACK TRANSACTION InsertStatement
+COMMIT
+
+SELECT * FROM Librarians 
