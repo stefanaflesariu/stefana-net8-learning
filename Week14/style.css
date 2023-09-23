@@ -1,0 +1,45 @@
+.paragraph1{
+    color: red;
+    font-size: 20px;
+}
+.paragraph2{
+    color: rgb(247, 0, 255);
+    font-style: italic;
+}
+#paragraph3{
+    color: #0400ff;
+    font-style: italic;
+}
+#paragraph4{
+    color: #1dbe40;
+    font-style: inherit;
+}
+#paragraph5{
+    color: rgb(255, 149, 0);
+}
+.span1,.span2{
+    display:flex;
+}
+table, th, td {
+    border: 1px solid black;
+    margin: 100px 100px;
+      padding: 5px 5px;
+}
+th,td{
+    background-color: antiquewhite;
+}
+img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.lists{
+    display: flex;
+    margin : 100px 100px;
+}
+.ol_list{
+    margin-right: 50px;
+}
+ol{
+    padding-inline-start:unset;
+}
